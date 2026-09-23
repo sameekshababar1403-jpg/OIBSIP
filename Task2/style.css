@@ -1,0 +1,420 @@
+/* =========================================
+   Tribute Page
+   Professional Responsive Stylesheet
+   ========================================= */
+
+/* ---------- Base / Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background-color: #f7f7f5;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ---------- Hero Section ---------- */
+
+.hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            rgba(20, 20, 20, 0.72),
+            rgba(20, 20, 20, 0.72)
+        ),
+        linear-gradient(135deg, #3f3f3f, #111111);
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0.9;
+}
+
+
+/* ---------- Common Section Styles ---------- */
+
+.tribute-section,
+.timeline-section,
+.legacy-section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.section-heading h2,
+.quote-card h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+
+/* ---------- About Section ---------- */
+
+.tribute-section {
+    background-color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+.image-wrapper {
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #e9e9e9;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+.image-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content p {
+    margin-bottom: 22px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Timeline Section ---------- */
+
+.timeline-section {
+    background-color: #f0f0ed;
+}
+
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 115px;
+    width: 2px;
+    background-color: #c9c9c4;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 35px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-year {
+    padding-top: 20px;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.timeline-card {
+    position: relative;
+    padding: 24px 28px;
+    border: 1px solid #deded9;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.timeline-card::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -59px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background-color: #444;
+    box-shadow: 0 0 0 1px #aaa;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
+}
+
+.timeline-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.timeline-card p {
+    color: #666;
+}
+
+
+/* ---------- Legacy Section ---------- */
+
+.legacy-section {
+    background-color: #ffffff;
+}
+
+.quote-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    border: 1px solid #deded9;
+    border-radius: 18px;
+    text-align: center;
+    background-color: #f7f7f5;
+}
+
+.quote-card h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.quote-card > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+    padding: 28px 20px;
+    text-align: center;
+    color: #bdbdbd;
+    background-color: #171717;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Accessibility ---------- */
+
+:focus-visible {
+    outline: 3px solid #555;
+    outline-offset: 4px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 600px) {
+
+    .tribute-section,
+    .timeline-section,
+    .legacy-section {
+        padding: 70px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .image-wrapper {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        margin: 0 auto;
+    }
+
+    .timeline::before {
+        left: 7px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-left: 35px;
+    }
+
+    .timeline-year {
+        padding-top: 0;
+        text-align: left;
+    }
+
+    .timeline-card::before {
+        top: 23px;
+        left: -35px;
+    }
+
+    .quote-card {
+        padding: 45px 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 65vh;
+        padding: 60px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .tribute-section,
+    .timeline-section,
+    .legacy-section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .quote-card {
+        padding: 35px 20px;
+    }
+
+    .footer {
+        padding: 24px 18px;
+    }
+}
+
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+/* Desktop About Section Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+.image-wrapper {
+    width: 420px !important;
+    max-width: 420px !important;
+}
+
+.image-wrapper img {
+    display: block !important;
+    width: 100% !important;
+    height: 520px !important;
+    object-fit: cover !important;
+    transition: transform 0.4s ease;
+}
