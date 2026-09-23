@@ -1,0 +1,300 @@
+/* ================================
+   Base Styles
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2933;
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   Main App
+================================ */
+
+.app {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.app-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #52616b;
+}
+
+.app-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #697781;
+    font-size: 16px;
+}
+
+
+/* ================================
+   Task Input
+================================ */
+
+.task-input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 15px 17px;
+    border: 1px solid #d7dde2;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#taskInput:focus {
+    border-color: #52616b;
+    box-shadow: 0 0 0 3px rgba(82, 97, 107, 0.12);
+}
+
+#addTaskBtn {
+    border: none;
+    border-radius: 10px;
+    padding: 0 24px;
+    background: #1f2933;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#addTaskBtn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   Task Summary
+================================ */
+
+.task-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    padding: 20px;
+    text-align: center;
+    background: #f7f8f9;
+    border: 1px solid #e5e8eb;
+    border-radius: 12px;
+}
+
+.summary-card span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.summary-card p {
+    color: #697781;
+    font-size: 14px;
+}
+
+
+/* ================================
+   Tasks Section
+================================ */
+
+.tasks-section {
+    margin-top: 10px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+}
+
+
+/* ================================
+   Task List
+================================ */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 35px 20px;
+    border: 1px dashed #cbd2d8;
+    border-radius: 12px;
+    color: #7a858d;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .app {
+        padding: 30px 20px;
+    }
+
+    .app-header h1 {
+        font-size: 32px;
+    }
+
+    .task-input-section {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        padding: 14px;
+    }
+
+    .task-summary {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================================
+   Task Cards
+================================ */
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 20px;
+    border: 1px solid #e1e5e8;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.task-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    transform: translateY(-1px);
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-content h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+}
+
+.task-content p {
+    font-size: 12px;
+    color: #7a858d;
+}
+
+.task-item.completed .task-content h3 {
+    text-decoration: line-through;
+    opacity: 0.55;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.task-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.task-actions button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+.complete-btn {
+    background: #e8f3ec;
+    color: #285c3b;
+}
+
+.edit-btn {
+    background: #eef1f4;
+    color: #3d4852;
+}
+
+.delete-btn {
+    background: #f8e8e8;
+    color: #8a3030;
+}
+
+
+/* ================================
+   Mobile Task Cards
+================================ */
+
+@media (max-width: 650px) {
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+}
